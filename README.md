@@ -79,3 +79,4 @@ The model does not fully represent motor/inverter efficiency, battery temperatur
 ## Scope
 
 The repository contains only the computational work and experiments used for this project. The results should be interpreted as outputs of the simplified model.
+
