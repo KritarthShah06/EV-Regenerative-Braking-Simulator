@@ -1,8 +1,7 @@
 # EV Regenerative Braking Energy Recovery Simulator
 
-## Project 3
 
-A Python-based physics simulation of regenerative braking in an electric vehicle. The project studies how vehicle speed, vehicle mass, regenerative efficiency, battery capacity and braking conditions affect calculated energy recovery.
+Python-based physics simulation of regenerative braking in an electric vehicle. The project studies how vehicle speed, vehicle mass, regenerative efficiency, battery capacity and braking conditions affect calculated energy recovery.
 
 The project is a simplified computational model. It is not a physical test of a production EV.
 
@@ -72,21 +71,6 @@ EV_Regenerative_Braking_Project3/
     └── figure_7_soc.png
 ```
 
-## Running the project
-
-Install the required package:
-
-```bash
-pip install -r requirements.txt
-```
-
-Then run:
-
-```bash
-python simulator.py
-```
-
-The program regenerates the CSV datasets and figures.
 
 ## Limitations
 
