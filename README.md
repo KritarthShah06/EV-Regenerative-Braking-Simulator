@@ -1,47 +1,55 @@
-EV Regenerative Braking Energy Recovery Simulator
+# EV Regenerative Braking Energy Recovery Simulator
+
+## Project 3
 
 A Python-based physics simulation of regenerative braking in an electric vehicle. The project studies how vehicle speed, vehicle mass, regenerative efficiency, battery capacity and braking conditions affect calculated energy recovery.
 
 The project is a simplified computational model. It is not a physical test of a production EV.
 
-Baseline model
+## Baseline model
 
-•Vehicle mass: 1800 kg
-•Battery capacity: 60 kWh
-•Regenerative efficiency: 80%
-•Starting SOC: 40%
-•Five braking events
+- Vehicle mass: 1800 kg
+- Battery capacity: 60 kWh
+- Regenerative efficiency: 80%
+- Starting SOC: 40%
+- Five braking events
 
-The baseline simulation gives approximately 0.3241 kWh of total recovered energy and a final SOC of 40.5401%.
+The baseline simulation gives approximately **0.3241 kWh** of total recovered energy and a final SOC of **40.5401%**.
 
-Main equations
+## Main equations
 
 Kinetic energy:
-E = 1/2 m v²
+
+`E = 1/2 m v²`
 
 Braking energy:
-E_braking = 1/2 m (v_i² - v_f²)
+
+`E_braking = 1/2 m (v_i² - v_f²)`
 
 Recovered energy:
-E_recovered = η E_braking
+
+`E_recovered = η E_braking`
 
 Braking distance:
-d = (v_i² - v_f²) / (2a)
+
+`d = (v_i² - v_f²) / (2a)`
 
 SOC increase:
-ΔSOC = recovered energy / battery capacity × 100
 
-Experiments
+`ΔSOC = recovered energy / battery capacity × 100`
 
-1.Initial speed vs recovered energy
-2.Vehicle mass vs recovered energy
-3.Regenerative efficiency vs recovered energy
-4.Battery capacity vs SOC increase
-5.Deceleration vs braking distance
-6.Five-event baseline simulation, including cumulative SOC
+## Experiments
 
-Repository structure
+1. Initial speed vs recovered energy
+2. Vehicle mass vs recovered energy
+3. Regenerative efficiency vs recovered energy
+4. Battery capacity vs SOC increase
+5. Deceleration vs braking distance
+6. Five-event baseline simulation, including cumulative SOC
 
+## Repository structure
+
+```text
 EV_Regenerative_Braking_Project3/
 ├── README.md
 ├── paper.md
@@ -62,21 +70,28 @@ EV_Regenerative_Braking_Project3/
     ├── figure_5_deceleration_vs_distance.png
     ├── figure_6_energy_per_event.png
     └── figure_7_soc.png
+```
 
-Running the project
+## Running the project
 
 Install the required package:
+
+```bash
 pip install -r requirements.txt
+```
 
 Then run:
+
+```bash
 python simulator.py
+```
 
 The program regenerates the CSV datasets and figures.
 
-Limitations
+## Limitations
 
 The model does not fully represent motor/inverter efficiency, battery temperature, charging-power limits, SOC-dependent charging limits, tire traction, motor torque curves or battery degradation.
 
-Scope
+## Scope
 
 The repository contains only the computational work and experiments used for this project. The results should be interpreted as outputs of the simplified model.
